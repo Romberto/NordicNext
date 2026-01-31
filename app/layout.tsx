@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import HeaderClient from "@/components/Header/HeaderClient";
+import Footer from "@/components/Footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,6 +45,13 @@ export const metadata: Metadata = {
   },
 };
 
+const navItems = [
+  { label: "Главная", path: "/" },
+  { label: "Проекты", path: "/catalog" },
+  { label: "Блог", path: "/blog" },
+  { label: "Контакты", path: "/contacts" },
+];
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -53,7 +62,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <HeaderClient navItems={navItems} />
         {children}
+        <Footer />
       </body>
     </html>
   );

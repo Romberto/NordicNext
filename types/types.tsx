@@ -10,7 +10,7 @@ export interface ProjectImage {
     uploaded_at: string;
   }
   
-  export interface Project {
+  export interface IProject {
     id: string;
     title: string;
     slug: string;
@@ -25,7 +25,7 @@ export interface ProjectImage {
     updated_at: string;
   }
   
-  export interface BlogPost {
+  export interface IBlogPost {
     id: string;
     title: string;
     slug:string;

@@ -1,26 +1,23 @@
-"use client"
-import Footer from "@/components/Footer/Footer";
-import Header from "@/components/Header/Header";
-import Hero from "@/components/Hero/Hero";
-import { useState } from "react";
+// app/page.tsx (SERVER)
 
-const navItems = [
-  { label: 'Главная', path: '/' },
-  { label: 'Проекты', path: '/catalog' },
-  { label: 'Блог', path: '/blog' },
-  { label: 'Контакты', path: '/contacts' },
-];
+import Hero from "@/components/sections/Hero";
+import Advantages from "@/components/sections/Advantages";
+import ProjectsHero from "@/components/sections/ProjectsHero";
+import TrustMetrics from "@/components/sections/TrustMetrics";
+import BlogHero from "@/components/sections/BlogHero";
+
+
 
 export default function HomePage() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
-    <div>
-      <Header navItems={navItems} isMobileMenuOpen={isMobileMenuOpen} onToggleMobileMenu={() => setIsMobileMenuOpen((prev) => !prev)}/>
-    <main>
-        <Hero/>
-    </main>
-    <Footer/>
-    </div>
-    
+    <>     
+      <main>
+        <Hero />
+        <Advantages />
+        <ProjectsHero />
+        <TrustMetrics />
+        <BlogHero/>
+      </main>
+    </>
   );
 }
