@@ -12,7 +12,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
             href={`/blog/${blog.slug}`}
             className="group block cursor-pointer"
         >
-            <div className="aspect-[3/2] overflow-hidden bg-stone-100 mb-4">
+            <div className="aspect-3/2 overflow-hidden bg-stone-100 mb-4">
                 <img
                     src={blog.public_url}
                     alt={blog.title}

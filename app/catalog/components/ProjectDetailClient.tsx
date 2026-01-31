@@ -97,7 +97,7 @@ export default function ProjectDetailClient() {
           />
         )}
 
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8 md:p-16">
+        <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent p-8 md:p-16">
           <div className="max-w-7xl mx-auto text-white">
             <h1 className="text-4xl md:text-6xl font-serif mb-4">
               {project.title}
