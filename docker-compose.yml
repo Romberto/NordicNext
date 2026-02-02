@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  nextjs:
+    build: .
+    container_name: nextjs
+    restart: always
+    expose:
+      - "3000"  # Нужен только внутри сети для Nginx
+    environment:
+      - NODE_ENV=production
+    networks:
+      - projhouse-net
+
+networks:
+  projhouse-net:
+    external: true
