@@ -1,4 +1,4 @@
-import { BlogPost } from "@/types/types";
+
 
 export const TELEGRAM = "nordic_sip"
 export const PHONE = '+79372427773'

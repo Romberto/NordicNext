@@ -7,9 +7,7 @@ import { Button } from "../../../components/Button/Button";
 import { TELEGRAM } from "@/config/constants";
 import { IProject } from "@/types/types";
 import { getProjectsBySlug } from "@/lib/api/project";
-
-
-
+import NextImage from "next/image";
 
 export default function ProjectDetailClient() {
   const params = useParams();
@@ -27,7 +25,7 @@ export default function ProjectDetailClient() {
       setLoading(false);
       return;
     }
-  
+
     const fetchData = async () => {
       setLoading(true);
       setError(false);
@@ -40,15 +38,13 @@ export default function ProjectDetailClient() {
         setLoading(false);
       }
     };
-  
+
     fetchData();
   }, [slug]);
-  
 
   // ====== АДАПТАЦИЯ ДАННЫХ ======
   const previewImage = useMemo(
-    () =>
-      project?.images.find((img) => img.is_preview)?.public_url ?? null,
+    () => project?.images.find((img) => img.is_preview)?.public_url ?? null,
     [project]
   );
 
@@ -71,17 +67,13 @@ export default function ProjectDetailClient() {
   // ====== СОСТОЯНИЯ ======
   if (loading) {
     return (
-      <div className="py-32 text-center text-stone-500">
-        Загрузка проекта…
-      </div>
+      <div className="py-32 text-center text-stone-500">Загрузка проекта…</div>
     );
   }
 
   if (error || !project) {
     return (
-      <div className="py-32 text-center text-red-500">
-        Проект не найден
-      </div>
+      <div className="py-32 text-center text-red-500">Проект не найден</div>
     );
   }
 
@@ -90,10 +82,11 @@ export default function ProjectDetailClient() {
       {/* Header Image */}
       <div className="relative h-[60vh] w-full bg-stone-900">
         {previewImage && (
-          <img
+          <NextImage
             src={previewImage}
             alt={project.title}
-            className="w-full h-full object-cover opacity-90"
+            fill
+            className="object-cover opacity-90"
           />
         )}
 
@@ -122,7 +115,6 @@ export default function ProjectDetailClient() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Main */}
           <div className="lg:col-span-2 space-y-12">
-
             <div>
               <h2 className="text-2xl font-serif mb-4">О проекте</h2>
               <p className="text-lg text-stone-600 font-light leading-relaxed">
@@ -136,11 +128,14 @@ export default function ProjectDetailClient() {
                   Галерея
                 </h3>
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {galleryImages.map((img, idx) => (
-                    <img
+                    <NextImage
                       key={idx}
                       src={img}
+                      alt={project.title}
+                      width={640}
+                      height={360}
                       className="h-48 md:h-64 object-cover cursor-pointer"
                       onClick={() => setActiveImage(img)}
                     />
@@ -155,11 +150,14 @@ export default function ProjectDetailClient() {
                   Планировки
                 </h3>
 
-                <div className="space-y-8">
+                <div className="space-y-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {plans.map((plan, idx) => (
-                    <img
+                    <NextImage
                       key={idx}
                       src={plan}
+                      alt={project.title}
+                      width={640}
+                      height={360}
                       className="cursor-pointer"
                       onClick={() => setActiveImage(plan)}
                     />
