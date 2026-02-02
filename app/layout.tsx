@@ -5,6 +5,7 @@ import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import CookieBanner from "@/components/CookieBanner";
 import { YandexMetrika } from "@/components/Yandexmetrica";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -63,11 +64,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      ><YandexMetrika counterId={106587428} />
+      ><Suspense><YandexMetrika counterId={106587428} />
         <Header navItems={navItems} />
         {children}
         <Footer />
-        <CookieBanner />
+        <CookieBanner /></Suspense>
       </body>
     </html>
   );

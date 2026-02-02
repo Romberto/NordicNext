@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/Button/Button";
 import { TELEGRAM } from "@/config/constants";
 import { getBlogBySlug } from "@/lib/api/blog";
