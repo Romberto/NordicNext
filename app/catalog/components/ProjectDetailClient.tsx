@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 import { Check, Home, Layers, Ruler } from "lucide-react";
 import { Button } from "../../../components/Button/Button";
 import { TELEGRAM } from "@/config/constants";
@@ -12,7 +12,6 @@ import NextImage from "next/image";
 export default function ProjectDetailClient() {
   const params = useParams();
   const slug = params.slug as string;
-  const router = useRouter();
 
   const [project, setProject] = useState<IProject | null>(null);
   const [loading, setLoading] = useState(true);
@@ -51,7 +50,7 @@ export default function ProjectDetailClient() {
   const galleryImages = useMemo(
     () =>
       project?.images
-        .filter((img) => img.is_gallery)
+        .filter((img) => img.is_gallery || img.is_preview)
         .map((img) => img.public_url) ?? [],
     [project]
   );
@@ -140,6 +139,7 @@ export default function ProjectDetailClient() {
                       onClick={() => setActiveImage(img)}
                     />
                   ))}
+
                 </div>
               </div>
             )}
@@ -157,7 +157,7 @@ export default function ProjectDetailClient() {
                       src={plan}
                       alt={project.title}
                       width={640}
-                      height={360}
+                      height={430}
                       className="cursor-pointer"
                       onClick={() => setActiveImage(plan)}
                     />
@@ -194,8 +194,11 @@ export default function ProjectDetailClient() {
           onClick={() => setActiveImage(null)}
           className="fixed inset-0 bg-black/90 flex items-center justify-center z-50"
         >
-          <img
+          <NextImage
             src={activeImage}
+            alt={project.title}
+            width={1920}
+            height={1080}
             className="max-w-full max-h-full object-contain"
           />
         </div>
