@@ -12,6 +12,7 @@ RUN npm install --legacy-peer-deps
 # Копируем весь проект
 COPY . .
 
+ENV NEXT_PRIVATE_SKIP_TURBOPACK=true
 # Собираем проект
 RUN npm run build
 
@@ -30,4 +31,4 @@ ENV NODE_ENV=production
 EXPOSE 3000
 
 # Запуск приложения
-CMD ["npm", "start"]
+CMD ["npm","start"]
