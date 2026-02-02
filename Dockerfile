@@ -12,7 +12,6 @@ RUN npm install --legacy-peer-deps
 # Копируем весь проект
 COPY . .
 
-ENV NEXT_PRIVATE_SKIP_TURBOPACK=true
 # Собираем проект
 RUN npm run build
 
