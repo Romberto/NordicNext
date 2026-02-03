@@ -16,7 +16,7 @@ ENV NODE_OPTIONS="--max-old-space-size=384"
 
 # 🔥 Отключаем Turbopack корректно
 ENV NEXT_DISABLE_TURBOPACK=1
-ENV NEXT_PUBLIC_API_URL=http://web:8000
+ENV NEXT_PUBLIC_API_URL=https://projhouse.ru/api/v1
 
 RUN npm run build
 
