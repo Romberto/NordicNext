@@ -6,6 +6,8 @@ import Header from "@/components/Header/Header";
 import CookieBanner from "@/components/CookieBanner";
 import { YandexMetrika } from "@/components/Yandexmetrica";
 import { Suspense } from "react";
+import Script from "next/script";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -24,8 +26,8 @@ export const metadata: Metadata = {
   description:
     "Проектирование и строительство современных домов из SIP-панелей. Nordic SIP — энергоэффективные дома под ключ.",
   verification: {
-      yandex: 'cf18f70a4934eb11',
-    },
+    yandex: "cf18f70a4934eb11",
+  },
   keywords: [
     "строительство домов из SIP панелей",
     "дома из SIP панелей под ключ",
@@ -99,6 +101,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Yandex RTB: head */}
+        <Script id="yandex-rtb-init" strategy="beforeInteractive">
+          {`
+      window.yaContextCb = window.yaContextCb || [];
+    `}
+        </Script>
+
+        <Script
+          id="yandex-rtb-script"
+          strategy="beforeInteractive"
+          src="https://yandex.ru/ads/system/context.js"
+        />
         <Suspense>
           <YandexMetrika counterId={106587428} />
           <Header navItems={navItems} />

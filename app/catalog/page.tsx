@@ -4,6 +4,7 @@ import { getProjects } from "@/lib/api/project";
 import ProjectsGrid from "./components/ProjectsGrid";
 import { useEffect, useState } from "react";
 import { IProject } from "@/types/types";
+import YandexBannerFloor from "@/components/YandexBannerFloor";
 
 export default function CatalogProgectsPage() {
 
@@ -62,6 +63,7 @@ export default function CatalogProgectsPage() {
         </header>
 
         <ProjectsGrid projects={projects} />
+        <YandexBannerFloor/>
       </div>
     </main>
   )

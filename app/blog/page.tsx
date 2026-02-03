@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import BlogsGrid from "./components/BlogsGrid";
 import { getBlogs } from "@/lib/api/blog";
 import { IBlogPost } from "@/types/types";
+import YandexBannerFloor from "@/components/YandexBannerFloor";
 
 export default function CatalogProgectsPage() {
     const [blogs, setProjects] = useState<IBlogPost[]>([]);
@@ -59,6 +60,7 @@ export default function CatalogProgectsPage() {
                     </p>
                 </header>
                 <BlogsGrid blogs={blogs} />
+                <YandexBannerFloor/>
             </div>
         </main>
     )
