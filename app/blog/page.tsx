@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import BlogsGrid from "./components/BlogsGrid";
 import { getBlogs } from "@/lib/api/blog";
 import { IBlogPost } from "@/types/types";
-import YandexBannerFloor from "@/components/YandexBannerFloor";
+import { YandexBannerMock } from "@/components/YandexBannerMock";
 
 export default function CatalogProgectsPage() {
     const [blogs, setProjects] = useState<IBlogPost[]>([]);
@@ -59,8 +59,9 @@ export default function CatalogProgectsPage() {
                         чтобы вдохновить на создание красивого и комфортного жилья
                     </p>
                 </header>
+                <YandexBannerMock/>
                 <BlogsGrid blogs={blogs} />
-                <YandexBannerFloor/>
+                
             </div>
         </main>
     )
