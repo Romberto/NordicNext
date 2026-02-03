@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   },
   description:
     "Проектирование и строительство современных домов из SIP-панелей. Nordic SIP — энергоэффективные дома под ключ.",
+  verification: {
+      yandex: 'cf18f70a4934eb11',
+    },
   keywords: [
     "строительство домов из SIP панелей",
     "дома из SIP панелей под ключ",
