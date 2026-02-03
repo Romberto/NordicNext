@@ -61,6 +61,7 @@ export default function CatalogProgectsPage() {
             в северной эстетике.
           </p>
         </header>
+        <YandexBannerMock/>
         <ProjectsGrid projects={projects} />
         
       </div>
