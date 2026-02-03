@@ -14,6 +14,10 @@ export const CATEGORIES = [
 ];
 
 
+export const API_URL =
+  typeof window === "undefined"
+    ? process.env.INTERNAL_API_URL
+    : process.env.NEXT_PUBLIC_API_URL;
 
 export const HOME_TEXT_TITLE = "Технология SIP: Тепло. Экология. Надежность.";
 export const HOME_TEXT_CONTENT = `

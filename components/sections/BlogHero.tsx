@@ -1,3 +1,4 @@
+
 import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import BlogCard from '../BlogCard/BlogCard';
@@ -7,6 +8,7 @@ import { getBlogs } from '@/lib/api/blog';
 export default async function BlogHero() {
 
   const blogs = await getBlogs({ limit: 3, skip: 0 });
+
 
   return (
     <section id='bloghero'>

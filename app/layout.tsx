@@ -6,7 +6,6 @@ import Header from "@/components/Header/Header";
 import CookieBanner from "@/components/CookieBanner";
 import { YandexMetrika } from "@/components/Yandexmetrica";
 import { Suspense } from "react";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
