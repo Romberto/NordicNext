@@ -95,7 +95,7 @@ export default function ProjectDetailClient() {
             <h1 className="text-4xl md:text-6xl font-serif mb-4">
               {project.title}
             </h1>
-            <YandexBannerMock/>
+            
             <div className="flex flex-wrap gap-6 text-sm font-medium tracking-wide uppercase">
               <div className="flex items-center gap-2">
                 <Ruler className="w-4 h-4" /> {project.quadrature} м²
@@ -121,7 +121,8 @@ export default function ProjectDetailClient() {
                 {project.shot_description}
               </p>
             </div>
-
+            <div className="mb-5"><YandexBannerMock/></div>
+            
             {galleryImages.length > 0 && (
               <div>
                 <h3 className="text-xl font-serif mb-6 border-b pb-2">

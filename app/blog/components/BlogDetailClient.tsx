@@ -62,7 +62,7 @@ const BlogDetailClient = () => {
           <h1 className="text-3xl md:text-5xl font-serif text-stone-900 mb-6 leading-tight">
             {blog.title}
           </h1>
-          <YandexBannerMock/>
+          <div className="mb-5"><YandexBannerMock/></div>
         </div>
 
         <NextImage

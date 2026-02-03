@@ -59,7 +59,7 @@ export default function CatalogProgectsPage() {
                         чтобы вдохновить на создание красивого и комфортного жилья
                     </p>
                 </header>
-                <YandexBannerMock/>
+                <div className="mb-5"><YandexBannerMock/></div>
                 <BlogsGrid blogs={blogs} />
                 
             </div>
