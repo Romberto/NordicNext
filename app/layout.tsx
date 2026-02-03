@@ -24,6 +24,38 @@ export const metadata: Metadata = {
   },
   description:
     "Проектирование и строительство современных домов из SIP-панелей. Nordic SIP — энергоэффективные дома под ключ.",
+  keywords: [
+    "строительство домов из SIP панелей",
+    "дома из SIP панелей под ключ",
+    "SIP дома под ключ",
+    "проекты домов из SIP панелей",
+    "проекты SIP домов",
+    "строительство SIP домов",
+    "быстровозводимые дома SIP",
+    "энергоэффективные SIP дома",
+    "каркасно SIP дома",
+    "современные дома из SIP панелей",
+    "загородные дома из SIP панелей",
+    "строительство частных домов SIP",
+    "стоимость дома из SIP панелей",
+    "цена строительства SIP дома",
+
+    "дома из SIP панелей Саратов",
+    "строительство SIP домов Саратов",
+    "SIP дома под ключ Саратов",
+
+    "дома из SIP панелей Краснодар",
+    "строительство SIP домов Краснодар",
+    "SIP дома под ключ Краснодар",
+
+    "дома из SIP панелей Самара",
+    "строительство SIP домов Самара",
+    "SIP дома под ключ Самара",
+
+    "технология строительства SIP домов",
+    "преимущества SIP домов",
+    "срок строительства SIP дома",
+  ],
   metadataBase: new URL("https://nordicsip.ru"),
   openGraph: {
     title: "Nordic SIP",
@@ -64,11 +96,14 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      ><Suspense><YandexMetrika counterId={106587428} />
-        <Header navItems={navItems} />
-        {children}
-        <Footer />
-        <CookieBanner /></Suspense>
+      >
+        <Suspense>
+          <YandexMetrika counterId={106587428} />
+          <Header navItems={navItems} />
+          {children}
+          <Footer />
+          <CookieBanner />
+        </Suspense>
       </body>
     </html>
   );
