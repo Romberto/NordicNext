@@ -2,6 +2,7 @@ import { API_URL } from "@/config/constants";
 import { IBlogPost } from "@/types/types";
 
 // получить список блогов
+console.log(API_URL)
 
 export async function getBlogs(
   { limit, skip }: { limit?: number; skip?: number } = {}

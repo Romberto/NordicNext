@@ -7,12 +7,10 @@ import TrustMetrics from "@/components/sections/TrustMetrics";
 import BlogHero from "@/components/sections/BlogHero";
 
 
-
 export default function HomePage() {
   return (
     <>     
-      <main>
-        
+      <main> 
         <Hero />
         <Advantages />
         <ProjectsHero />
