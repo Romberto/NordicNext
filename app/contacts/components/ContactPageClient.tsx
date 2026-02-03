@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/Button/Button";
 import { PHONE, TELEGRAM } from "@/config/constants";
 import { Phone, Send } from "lucide-react";

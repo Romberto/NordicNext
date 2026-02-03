@@ -1,3 +1,5 @@
+"use client"
+
 import { IProject } from "@/types/types";
 import { ProjectCard } from "@/components/ProjectCard/ProjectCard";
 

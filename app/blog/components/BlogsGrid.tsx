@@ -1,3 +1,5 @@
+"use client"
+
 import BlogCard from "@/components/BlogCard/BlogCard";
 import { IBlogPost } from "@/types/types";
 
