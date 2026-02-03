@@ -8,6 +8,7 @@ import { Send } from "lucide-react";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import NextImage from "next/image";
+import { YandexBannerMock } from "@/components/YandexBannerMock";
 
 
 const BlogDetailClient = () => {
@@ -61,6 +62,7 @@ const BlogDetailClient = () => {
           <h1 className="text-3xl md:text-5xl font-serif text-stone-900 mb-6 leading-tight">
             {blog.title}
           </h1>
+          <YandexBannerMock/>
         </div>
 
         <NextImage
