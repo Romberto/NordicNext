@@ -13,8 +13,8 @@ const Advantages = () => {
               {HOME_TEXT_TITLE}
             </h2>
             <div className="block lg:hidden my-10">
-  <YandexBannerMock variant="mobile" />
-</div>
+            <YandexBannerMock variant="mobile" />
+            </div>
 
             <div className="prose prose-stone prose-lg text-stone-600 font-light text-justify leading-relaxed whitespace-pre-line max-w-none">
               {HOME_TEXT_CONTENT}
