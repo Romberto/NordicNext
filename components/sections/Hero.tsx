@@ -4,12 +4,12 @@ import HeroClient from "../client/HeroClient";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="relative h-[90vh] min-h-[600px] w-full bg-stone-900 overflow-hidden">
+      <div className="relative h-[90vh] min-h-[400px] w-full bg-stone-900 overflow-hidden">
         <Image
           src="/images/hero.webp"
           alt="Modern SIP House"
           fill
-          className="object-cover opacity-95"
+          className="object-cover opacity-95 w-[320px] sm:w-full"
           priority
         />
 
@@ -24,7 +24,7 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-stone-300 font-light max-w-2xl mx-auto tracking-wide">
+            <p className="text-lg md:text-xl text-stone-300 font-medium max-w-2xl mx-auto tracking-wide">
               Проектируем и строим энергоэффективные дома из SIP-панелей.
               Премиальное качество, скандинавский минимализм и надежность.
             </p>
